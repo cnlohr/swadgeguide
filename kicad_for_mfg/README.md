@@ -35,7 +35,18 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
 
 General warning: Do not use the BOM tool built into PCBNew.
 
-## PCB Export
+## PCBs
+
+### Setup
+ * The following are recommended to minimize board cost and maximize yield.
+ * Configure your design rules (Design Rules->Design Rules)
+ * Use the following:
+| Field Name   | Value     | Remarks  |
+|--------------|-----------|----------|
+| Clearance    | 0.0077 in | Can go as low as 6.5 mil. |
+| Track Width  | 0.012 in  | Can go as low as 7 mil, but 12-15 is ideal for current carrying capacity. |
+| Via Diameter | 0.025 in  | |
+| Via Drill    | 0.014 in  | |
 
 ### Pre-export
  * Verify the follwoing features appear:
