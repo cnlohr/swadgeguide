@@ -41,6 +41,7 @@ General warning: Do not use the BOM tool built into PCBNew.
  * The following are recommended to minimize board cost and maximize yield.
  * Configure your design rules (Design Rules->Design Rules)
  * Use the following:
+
 | Field Name   | Value     | Remarks  |
 |--------------|-----------|----------|
 | Clearance    | 0.0077 in | Can go as low as 6.5 mil. |
