@@ -89,6 +89,7 @@ Example template below:
 Please quote for:
  * 1.6mm FR4 PCB, Red solder mask, White silkscreen, 1oz Copper.
  * Assemble front of swadge first, add batteries after all other parts are soldered.
+ * Capacitor voltage ratings are listed minimum.  Higher voltage capacitors may be used. 
  * See attached youtube video [URL] for additional testing instructions.
 ```
 
