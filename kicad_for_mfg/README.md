@@ -15,9 +15,9 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
  * If a non-populated part, indicate "NP_" in value, and "Do not populate" in notes. 
  
 ## Schematic Export
-Open Schematic designer.  "File" -> "Plot" -> "Plot" Set it up as follows and click "Plot All Pages"
-![Kicad Schematic Plot Dialog](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/kicad_for_mfg/dialog_plot_schematic.png "Kicad Schematic Plot Dialog")
-Note: For commercial products this usually should not be transferred to manufacturing due to potential design leakage risk.
+ * Open Schematic designer.  "File" -> "Plot" -> "Plot" Set it up as follows and click "Plot All Pages"
+ * ![Kicad Schematic Plot Dialog](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/kicad_for_mfg/dialog_plot_schematic.png "Kicad Schematic Plot Dialog")
+ * Note: For commercial products this usually should not be transferred to manufacturing due to potential design leakage risk.
 
 ### BOM
  * If not already done, import [swadge_bom.xsl](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/nonlibrary_files/swadge_bom.xsl) to your Bill of Materials plugin list.
