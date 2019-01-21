@@ -14,7 +14,7 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
  * Add a `Notes` Field, give vendor any specific notes.
  * If applicable, add an `MPN`.
  * If a non-populated part, indicate "NP_" in value, and "Do not populate" in notes. 
- * If an item should be completely left off the BOM, then make a new field called NOBOM and put "y" as its value.
+ * If an item should be completely left off the BOM, then make a new field called `NOBOM` and put "y" as its value.  Things like pads, test points, empty housings, landing connectors, pogo pads, etc.  Should all have this property.
  
 ## Schematic Export
  * Open Schematic designer.  "File" -> "Plot" -> "Plot" Set it up as follows and click "Plot All Pages"
