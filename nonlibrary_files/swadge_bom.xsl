@@ -1,19 +1,17 @@
-<!--XSL style sheet to convert EESCHEMA XML Partlist Format to CSV BOM Format
-    Copyright (C) 2013, Stefan Helmert.  
-	Copyright (C) 2018, Charles Lohr. (Any changes are in public domain, only source file is GPL)
-    GPL v2.
+<!--
+    A better CSV export from BOMs from KiCad.
+        Copyright (C) 2019 <>< Charles Lohr  (All modifications are copyright-free, CC0, or may be licensed under NewBSD/X11 or GPL v2)
+	Based on XSL style sheet to convert EESCHEMA XML Partlist Format to CSV BOM Format
+	    Copyright (C) 2013, Stefan Helmert.      GPL v2.
 
-    Functionality:
-        Generation of csv table with table head of all existing field names
-        and correct assigned cell entries
+    Portions of this document may still be subject to GPL bleed.
+
+	To execute this from command-line, use:
+        xsltproc -o "%O_BOM.csv" "[xsl file]" "%I"
 
     How to use this is explained in eeschema.pdf chapter 14.  You enter a command line into the
     netlist exporter using a new (custom) tab in the netlist export dialog.  The command is
     similar to
-        on Windows:
-            xsltproc -o "%O.csv" "C:\Program Files (x86)\KiCad\bin\plugins\bom2csv.xsl" "%I"
-        on Linux:
-            xsltproc -o "%O.csv" /usr/local/lib/kicad/plugins/bom2csv.xsl "%I"
 
     Instead of "%O.csv" you can alternatively use "%O" if you will supply your own file extension when
     prompted in the UI.  The double quotes are there to account for the possibility of space(s)
@@ -22,10 +20,9 @@
 
 <!--
     @package
-    Generate a Tab delimited list (csv file type).
+    Make a CSV output, sorted by type of component, and value.
     One component per line
-    Fields are
-    Ref,Value, Footprint, Field5, Field4
+    Fields are    Ref,Value, Footprint, Field5, Field4, ...
 -->
 
 <!DOCTYPE xsl:stylesheet [
@@ -42,17 +39,14 @@
     <!-- main part -->
     <xsl:template match="/export">
         <xsl:text>Reference,Value,Footprint</xsl:text>
+        <xsl:for-each select="components/comp/fields/field[generate-id(.) = generate-id(key('headentr',@name)[1])]">
+            <xsl:text>,</xsl:text>
+            <xsl:value-of select="@name"/>
+        </xsl:for-each>
+        <xsl:text>&nl;</xsl:text>
 
-            <!-- find all existing table head entries and list each one once -->
-            <xsl:for-each select="components/comp/fields/field[generate-id(.) = generate-id(key('headentr',@name)[1])]">
-                <xsl:text>,</xsl:text>
-                <xsl:value-of select="@name"/>
-            </xsl:for-each>
-            <xsl:text>&nl;</xsl:text>
-
-        <!-- all table entries -->
         <xsl:apply-templates select="components/comp">
-            <xsl:sort select="@ref"/>
+            <xsl:sort select="concat( substring(@ref,1,1), value )"/>
         </xsl:apply-templates>
     </xsl:template>
 
