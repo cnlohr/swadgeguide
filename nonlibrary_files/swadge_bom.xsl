@@ -1,8 +1,7 @@
 <!--XSL style sheet to convert EESCHEMA XML Partlist Format to CSV BOM Format
     Copyright (C) 2013, Stefan Helmert.  
+	Copyright (C) 2018, Charles Lohr. (Any changes are in public domain, only source file is GPL)
     GPL v2.
-
-	Modified 2019, Charles Lohr. (Any changes are in public domain, only source file is GPL)
 
     Functionality:
         Generation of csv table with table head of all existing field names
@@ -26,7 +25,7 @@
     Generate a Tab delimited list (csv file type).
     One component per line
     Fields are
-    Ref,Value, Footprint, Datasheet, Field5, Field4, price
+    Ref,Value, Footprint, Field5, Field4
 -->
 
 <!DOCTYPE xsl:stylesheet [
@@ -42,25 +41,28 @@
 
     <!-- main part -->
     <xsl:template match="/export">
-        <xsl:text>Reference, Value, Footprint</xsl:text>
+        <xsl:text>Reference,Value,Footprint</xsl:text>
 
             <!-- find all existing table head entries and list each one once -->
-            <xsl:for-each select="components/comp/fields/field[generate-id(.) = generate-id(key('headentr', @name)[1])]">
-                <xsl:text>, </xsl:text>
+            <xsl:for-each select="components/comp/fields/field[generate-id(.) = generate-id(key('headentr',@name)[1])]">
+                <xsl:text>,</xsl:text>
                 <xsl:value-of select="@name"/>
             </xsl:for-each>
             <xsl:text>&nl;</xsl:text>
 
         <!-- all table entries -->
-        <xsl:apply-templates select="components/comp"/>
+        <xsl:apply-templates select="components/comp">
+            <xsl:sort select="@ref"/>
+        </xsl:apply-templates>
     </xsl:template>
 
     <!-- the table entries -->
     <xsl:template match="components/comp">
-        <xsl:value-of select="@ref"/><xsl:text>, </xsl:text>
-        <xsl:value-of select="value"/><xsl:text>, </xsl:text>
-        <xsl:value-of select="footprint"/><xsl:text>, </xsl:text>
-        <xsl:apply-templates select="fields"/>
+        <xsl:value-of select="@ref"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="value"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="footprint"/>
+        <xsl:apply-templates select="fields">
+        </xsl:apply-templates>
         <xsl:text>&nl;</xsl:text>
     </xsl:template>
 
@@ -71,9 +73,9 @@
         <xsl:variable name="fieldvar" select="field"/>
 
         <!-- for all existing head entries -->
-        <xsl:for-each select="/export/components/comp/fields/field[generate-id(.) = generate-id(key('headentr', @name)[1])]">
+        <xsl:for-each select="/export/components/comp/fields/field[generate-id(.) = generate-id(key('headentr',@name)[1])]">
             <xsl:variable name="allnames" select="@name"/>
-            <xsl:text>, </xsl:text>
+            <xsl:text>,</xsl:text>
 
             <!-- for all field entries in the remembered fields section -->
             <xsl:for-each select="$fieldvar">
