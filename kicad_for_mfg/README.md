@@ -10,10 +10,11 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
    * SMT Resistors (unless special)
    * NOTE: This field may be renamed "Vendor PN"
  * Add a `Cost100` Field, approximate cost.
- * Add a `Substitutable` Field, should be "Y" or "N"
+ * Add a `Substitutable` Field, should be "Y", "N", or "DO NOT POPULATE"
  * Add a `Notes` Field, give vendor any specific notes.
  * If applicable, add an `MPN`.
  * If a non-populated part, indicate "NP_" in value, and "Do not populate" in notes. 
+ * If an item should be completely left off the BOM, then make a new field called NOBOM and put "y" as its value.
  
 ## Schematic Export
  * Open Schematic designer.  "File" -> "Plot" -> "Plot" Set it up as follows and click "Plot All Pages"
