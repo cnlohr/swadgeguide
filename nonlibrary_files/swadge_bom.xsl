@@ -21,7 +21,8 @@
 <!--
     @package
     Make a CSV output, sorted by type of component, and value.
-    One component per line
+    One component per line.  Have a field called "NOBOM" and
+	the component will be excluded from the BOM.
     Fields are    Ref,Value, Footprint, Field5, Field4, ...
 -->
 
@@ -40,8 +41,10 @@
     <xsl:template match="/export">
         <xsl:text>Reference,Value,Footprint</xsl:text>
         <xsl:for-each select="components/comp/fields/field[generate-id(.) = generate-id(key('headentr',@name)[1])]">
-            <xsl:text>,</xsl:text>
-            <xsl:value-of select="@name"/>
+            <xsl:if test="not( @name='NOBOM' )" >
+                <xsl:text>,</xsl:text>
+                <xsl:value-of select="@name"/>
+            </xsl:if>
         </xsl:for-each>
         <xsl:text>&nl;</xsl:text>
 
@@ -52,12 +55,14 @@
 
     <!-- the table entries -->
     <xsl:template match="components/comp">
-        <xsl:value-of select="@ref"/><xsl:text>,</xsl:text>
-        <xsl:value-of select="value"/><xsl:text>,</xsl:text>
-        <xsl:value-of select="footprint"/>
-        <xsl:apply-templates select="fields">
-        </xsl:apply-templates>
-        <xsl:text>&nl;</xsl:text>
+        <xsl:if test="not( fields/field/@name='NOBOM' )" >
+		    <xsl:value-of select="@ref"/><xsl:text>,</xsl:text>
+		    <xsl:value-of select="value"/><xsl:text>,</xsl:text>
+		    <xsl:value-of select="footprint"/>
+		    <xsl:apply-templates select="fields">
+		    </xsl:apply-templates>
+		    <xsl:text>&nl;</xsl:text>
+        </xsl:if>
     </xsl:template>
 
     <!-- table entries with dynamic table head -->
@@ -66,24 +71,27 @@
         <!-- remember current fields section -->
         <xsl:variable name="fieldvar" select="field"/>
 
+
         <!-- for all existing head entries -->
         <xsl:for-each select="/export/components/comp/fields/field[generate-id(.) = generate-id(key('headentr',@name)[1])]">
-            <xsl:variable name="allnames" select="@name"/>
-            <xsl:text>,</xsl:text>
+            <xsl:if test="not( @name='NOBOM' )" >
+                <xsl:variable name="allnames" select="@name"/>
+                <xsl:text>,</xsl:text>
 
-            <!-- for all field entries in the remembered fields section -->
-            <xsl:for-each select="$fieldvar">
+                <!-- for all field entries in the remembered fields section -->
+                <xsl:for-each select="$fieldvar">
 
-                <!-- only if this field entry exists in this fields section -->
-                <xsl:if test="@name=$allnames">
-                    <!-- content of the field -->
-                    <xsl:value-of select="."/>
-                </xsl:if>
-                <!--
-                    If it does not exist, use an empty cell in output for this row.
-                    Every non-blank entry is assigned to its proper column.
-                -->
-            </xsl:for-each>
+                    <!-- only if this field entry exists in this fields section -->
+                    <xsl:if test="@name=$allnames">
+                        <!-- content of the field -->
+                       <xsl:value-of select="."/>
+                    </xsl:if>
+                    <!--
+                        If it does not exist, use an empty cell in output for this row.
+                        Every non-blank entry is assigned to its proper column.
+                    -->
+                </xsl:for-each>
+            </xsl:if>
         </xsl:for-each>
     </xsl:template>
 
