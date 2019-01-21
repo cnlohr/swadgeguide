@@ -94,5 +94,3 @@ Please quote for:
 ```
 
 Zip the folder up and email it to Elecrow stating the quantities they should quote.
-
-If 
