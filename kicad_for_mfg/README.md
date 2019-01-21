@@ -12,6 +12,7 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
  * Add a `Cost100` Field, approximate cost.
  * Add a `Substitutable` Field, should be "Y" or "N"
  * Add a `Notes` Field, give vendor any specific notes.
+ * If applicable, add an `MPN`.
  * If a non-populated part, indicate "NP_" in value, and "Do not populate" in notes. 
  
 ## Schematic Export
