@@ -11,10 +11,14 @@
  
  ## Export
   * In schematic designer, set Bill of Materials
-    * If not already done, import [swadge_bom](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/nonlibrary_files/swadge_bom.xsl) to your Bill of Materials plugin.
+    * If not already done, import [swadge_bom.xsl](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/nonlibrary_files/swadge_bom.xsl) to your Bill of Materials plugin.
+      * Use the command-line `xsltproc -o "%O_BOM.csv" "(swadge_bom.xsl location)" "%I"`
     * Select "bom2csv"
     * Click "Export"
     * Verify a new file by *PROJECTNAME* exists, no extension.
     * Rename file to .csv
-    * Open file in plain-text editor, replace-all "`,`" with "`, `"
+    * Open in OpenOffice
+      * Use "," as a deliminator
+      * Uncheck "Merge Deliminators"
+    * Or open in Excel or Google Sheets
     
