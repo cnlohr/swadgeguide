@@ -32,8 +32,7 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
    * Use "," as a deliminator
    * Uncheck "Merge Deliminators"
  * Or open in Excel or Google Sheets to verify.
-
-General warning: Do not use the BOM tool built into PCBNew.
+ * General warning: Do not use the BOM tool built into PCBNew.  Use the one built into eeschema.
 
 ## PCBs
 
