@@ -12,10 +12,13 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
  * Add a `Cost100` Field, approximate cost.
  * Add a `Substitutable` Field, should be "Y" or "N"
  * Add a `Notes` Field, give vendor any specific notes.
+ * If applicable, add an `MPN`.
  * If a non-populated part, indicate "NP_" in value, and "Do not populate" in notes. 
  
 ## Schematic Export
-Open Schematic designer.  "File" -> "Plot" -> "Plot" Set it up as follows and click "Plot All Pages" ![Kicad Schematic Plot Dialog](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/kicad_for_mfg/dialog_plot_schematic.png "Kicad Schematic Plot Dialog").  Note: For commercial products this usually should not be transferred to manufacturing due to potential design leakage risk.
+ * Open Schematic designer.  "File" -> "Plot" -> "Plot" Set it up as follows and click "Plot All Pages"
+ * ![Kicad Schematic Plot Dialog](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/kicad_for_mfg/dialog_plot_schematic.png "Kicad Schematic Plot Dialog")
+ * Note: For commercial products this usually should not be transferred to manufacturing due to potential design leakage risk.
 
 ### BOM
  * If not already done, import [swadge_bom.xsl](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/nonlibrary_files/swadge_bom.xsl) to your Bill of Materials plugin list.
@@ -30,9 +33,6 @@ Open Schematic designer.  "File" -> "Plot" -> "Plot" Set it up as follows and cl
  * Or open in Excel or Google Sheets to verify.
 
 General warning: Do not use the BOM tool built into PCBNew.
-
-### PDF Schematic
- *
 
 ## PCB Export
 
@@ -89,7 +89,10 @@ Example template below:
 ```
 Please quote for:
  * 1.6mm FR4 PCB, Red solder mask, White silkscreen, 1oz Copper.
+ * Use HASL Lead-Free finish.
+ * Use Lead-Free solder only.
  * Assemble front of swadge first, add batteries after all other parts are soldered.
+ * Capacitor voltage ratings are listed minimum.  Higher voltage capacitors may be used. 
  * See attached youtube video [URL] for additional testing instructions.
 ```
 
