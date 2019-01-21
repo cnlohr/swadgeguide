@@ -31,9 +31,6 @@ Open Schematic designer.  "File" -> "Plot" -> "Plot" Set it up as follows and cl
 
 General warning: Do not use the BOM tool built into PCBNew.
 
-### PDF Schematic
- *
-
 ## PCB Export
 
 ### Pre-export
