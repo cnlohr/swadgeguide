@@ -5,7 +5,6 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
 ## Schematic Pre-Export
  * Make sure all capacitors are labeled with a capacitance and voltage.
  * Make sure all basic components have clearly readable footprints.
- * 
  * Add a `Digikey` field for all components other than:
    * SMT Capacitors (unless special)
    * SMT Resistors (unless special)
@@ -16,7 +15,7 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
  * If a non-populated part, indicate "NP_" in value, and "Do not populate" in notes. 
  
 ## Schematic Export
-Open Schematic designer.
+Open Schematic designer.  "File" -> "Plot" -> "Plot" Set it up as follows and click "Plot All Pages" ![Kicad Schematic Plot Dialog](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/kicad_for_mfg/dialog_plot_schematic.png "Kicad Schematic Plot Dialog").  Note: For commercial products this usually should not be transferred to manufacturing due to potential design leakage risk.
 
 ### BOM
  * If not already done, import [swadge_bom.xsl](https://raw.githubusercontent.com/cnlohr/swadgeguide/master/nonlibrary_files/swadge_bom.xsl) to your Bill of Materials plugin list.
@@ -47,7 +46,7 @@ General warning: Do not use the BOM tool built into PCBNew.
  * **Run DRC**
  * Click "List Unconnected"
  
-### Final Export
+### PCB Gerbers Export
  * File->Plot.
  * Use a filename such that it has PARTNUMBER_revX
  * Use the following settings:
@@ -62,10 +61,38 @@ General warning: Do not use the BOM tool built into PCBNew.
 ## RFQ (Request for Quote) Package
 Make a folder with a project name and rev number, and RFQ, i.e. `Swadge2019_revA_RFQ`. 
 
-Place the following in there:
+Place the following in a folder.
   * The ...BOM.csv
+  * The gerbers + POS files.
   * A high-resolution image, prefer > 300 DPI.  Keep file size to under 1 MB.
   * If parts appear on both sides, two pictures.
-  * 
   * **OPTIONAL** A schematic of the design.  Warning: This has potential IP implications.
+  * A README.txt with the following standard information:
+    * Board Thickness   (1oz)
+    * Solder Mask Color (Green)
+    * Silkscreen Color  (White)
+    * Surface Finish    (HASL, Leaded)
+      * Leaded HASL for cheap high reliability but not good for people to contact.
+      * Lead-Free HASL for cheap, but people need to contact.
+      * ENIG for high quality, and people friendly.
+    * Whether to use LEADED or UNLEADED solder. (Leaded)
+    * Copper Thickness (1oz)
+  * README.txt can also contain:
+    * Information about sourcing of specific components.
+    * Special instructions for individual components.
+    * Information about board cleaning (i.e. no ultrasonic if you have MEMS devices)
+  * If you have firmware files to test assemblies, i.e. something Elecrow can flash on your thing at the factory to do a functionality test, include this here, too.
+  * All information about testing should be included.
 
+Example template below:
+
+```
+Please quote for:
+ * 1.6mm FR4 PCB, Red solder mask, White silkscreen, 1oz Copper.
+ * Assemble front of swadge first, add batteries after all other parts are soldered.
+ * See attached youtube video [URL] for additional testing instructions.
+```
+
+Zip the folder up and email it to Elecrow stating the quantities they should quote.
+
+If 
