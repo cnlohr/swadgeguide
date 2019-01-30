@@ -45,8 +45,8 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
 |--------------|-----------|----------|
 | Clearance    | 0.0077 in | Can go as low as 6.5 mil. |
 | Track Width  | 0.012 in  | Can go as low as 7 mil, but 12-15 is ideal for current carrying capacity. |
-| Via Diameter | 0.025 in  | |
-| Via Drill    | 0.014 in  | |
+| Via Diameter | 0.020 in  | |
+| Via Drill    | 0.013 in  | |
 
 ### Pre-export
  * Verify the follwoing features appear:
