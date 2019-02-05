@@ -5,6 +5,11 @@ This is WiP.  DO NOT TREAT AS FINAL.
 Definition
 > **/swædʒ/** *n.* a circuit board that may be worn by event attendees, closely associated with a badge, yet generally not providing credentials.
 
+# Artwork
+
+***THIS SECTION IS NOT YET MIGRATED FROM CONFLUENCE***
+If you're an artist, recommend you head over to Artwork Design first. If you're an event organizer, you may want to review this main page as well as the Schedule. For direct contact in private channel, use the #badges slack channel. For public questions and comments use the #circuitboards channel.
+
 ## Swadge Types
 
 ### Wifi Swadges
@@ -26,7 +31,25 @@ Cost column includes estimated assembly cost for 1000+ units.
   
 ### Non-WIFI
 
-Talk about AVR here...
+Non-wifi swadges can use any number of mechanisms to operate. These do not need any form of infrastructure to operate and are generally lower-power, so they can be operated off of a lithium coin cell.
+
+| Device | Description | Cost/ea | Size | Count | Extended |
+|--------|-------------|---------|------|-------|----------|
+| Circuit board	| | $0.30-$1.30	| 10x10mm to 100x100mm Up to 100x120mm (+$) | 1 | |
+| Processor |	ATTiny861 SOIC, Easy-to-work-with 8kB Flash, 512B R, 512B EE | $1.05 | 10x12mm x 3mm | All 16 GPIO |
+| | ATTiny861 QFN	Same as above | $0.67 - 0.88 | 5x5mm x 1mm | | |
+| | STM8S003 16MHz Might not work (Still needs testing); 8kB F, 1kB R, 128 B EE | $0.39 | 6.5x6.4mm x 2mm	| | |
+| | STM8L101 16MHz | Also cheap.  No ADC; 8kB F, 1.5kB R, 2kB EE | $0.51 | 6.5x6.4mm x 2mm	| | |
+| | STM8L051 16MHz	Cheap, ADC; 8kB F, 1kB R, 256 B EE	$0.50	6.5x6.4mm x 2mm	
+| | EFM8BB10F2G-A Unknown architecture.  Maybe very cheap. | | $0.33	3x3mm x 1mm	 | | |
+| | Battery + Holder CR2032 210 mAh  | | | | |
+| Tactile Button | CKN9112TR-ND,	Attendees can interact by clicking buttons. | $0.10 | 6mm x 6mm x 4mm	 | | |
+| LEDs | Red	| | | |
+| | Green	| | | |
+| | IR	| | | |
+| Touch Buttons	| Available on ATTiny processors.  MAY be available on others.  Can detect variable pressure. | FREE | Up to 30x30mm | Up to 4 ||
+
+TODO: Talk about AVR here...
 
 ## Design
 
