@@ -54,3 +54,33 @@ TODO: Talk about AVR here...
 ## Design
 
 For The KiCad design guide to help you make cheap-as-possible boards, check this out: https://github.com/cnlohr/swadgeguide/blob/master/kicad_for_mfg/README.md
+
+## Order Checklist
+
+
+1) For all designs
+  a) Verify board specifications.
+  b) Do DRC.
+  c) Check for disconnected traces in dialog for DRC.
+2) For all gerbers
+  a) Select output type to gerber.
+  b) Select output folder.
+  c) Exclude outline from layers.
+  d) Use protel extensions.
+3) Verify gerbers in an online gerber viewer or Osh Park.
+  a) For order of raw PCBs from PCBWay:
+    * Use 1.6mm thick boards.
+    * Use selected colors.
+    * Use HASL Lead-free or Immersion Gold.
+    * Specify that the edges of the board should be smooth.
+4) For final order to Elecrow:
+  a) PCB:
+    * Specify 1.6mm board thickness.
+    * Use specified colors.
+    * HASL Lead-free or Immersion Gold.
+    * Board edges should be smooth.
+  b) Other details
+    * Tell them to please use Lead-free solder paste.
+    * Prepare firmware for their programming.
+
+
