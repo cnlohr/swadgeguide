@@ -59,28 +59,63 @@ For The KiCad design guide to help you make cheap-as-possible boards, check this
 
 
 1) For all designs
-  a) Verify board specifications.
-  b) Do DRC.
-  c) Check for disconnected traces in dialog for DRC.
+    1) Verify board specifications.
+    2) Do DRC.
+    3) Check for disconnected traces in dialog for DRC.
 2) For all gerbers
-  a) Select output type to gerber.
-  b) Select output folder.
-  c) Exclude outline from layers.
-  d) Use protel extensions.
+    1) Select output type to gerber.
+    2) Select output folder.
+    3) Exclude outline from layers.
+    4) Use protel extensions.
 3) Verify gerbers in an online gerber viewer or Osh Park.
-  a) For order of raw PCBs from PCBWay:
-    * Use 1.6mm thick boards.
-    * Use selected colors.
-    * Use HASL Lead-free or Immersion Gold.
-    * Specify that the edges of the board should be smooth.
+    1) For order of raw PCBs from PCBWay:
+        * Use 1.6mm thick boards.
+        * Use selected colors.
+        * Use HASL Lead-free or Immersion Gold.
+        * Specify that the edges of the board should be smooth.
 4) For final order to Elecrow:
-  a) PCB:
-    * Specify 1.6mm board thickness.
-    * Use specified colors.
-    * HASL Lead-free or Immersion Gold.
-    * Board edges should be smooth.
-  b) Other details
-    * Tell them to please use Lead-free solder paste.
-    * Prepare firmware for their programming.
+    1) PCB:
+        * Specify 1.6mm board thickness.
+        * Use specified colors.
+        * HASL Lead-free or Immersion Gold.
+        * Board edges should be smooth.
+    2) Other details
+        * Tell them to please use Lead-free solder paste.
+        * Prepare firmware for their programming.
 
+
+## Schedule
+
+The following schedule, if adhered to should give up to two weeks of wiggle room.
+T-10 weeks out:
+
+Consider actual swadge and selection:
+ * Decide if swadge must be wifi or dumb badge.
+ * Decide swadge outline and artwork levels.
+ * Get rough quantity estimate.
+ * Use https://www.pcbway.com/orderonline.aspx to develop pricing scheme for raw PCB at quantities.
+ * Recommend keeping design maximum dimensions to <100mm x 100mm.
+
+T-9 weeks out:
+ * Design rough draft of board.
+ * Place order for boards from PCBWay
+
+T-8 weeks out:
+ * Receive boards.
+ * Populate boards and write test firmware.
+ * Make design changes.
+ * Order new boards based on design from PCBWay
+ * Make initial RFC from Elecrow
+
+T-7 weeks out:
+ * Receive PCBs
+ * Test design / firmware.
+ * Finalize artwork with Elecrow.
+ * Place order with Elecrow.
+
+T-6 weeks out:
+ * Provide Elecrow firmware.
+
+T-2 weeks out:
+ * Receive order Begin Testing
 
