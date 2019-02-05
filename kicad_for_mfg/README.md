@@ -38,6 +38,8 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
 
 ### Setup
  * The following are recommended to minimize board cost and maximize yield.
+ * More complicated PCB processes will cost more.  Avoid them.
+ * TWO LAYERS! Don't be a 4+ layer tin foil hat nut.
  * Configure your design rules (Design Rules->Design Rules)
  * Use the following:
 
