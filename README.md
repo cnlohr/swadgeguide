@@ -21,8 +21,8 @@ Cost column includes estimated assembly cost for 1000+ units.
 | Shipping from China | You have to get it to the USA Somehow! | $0.20 | 1 | $0.20 |
 | Tactile Button | Attendees can interact by clicking buttons; Example: CKN9112TR-ND | $0.10 | 6mm x 6mm x 4mm | 8 rec | $0.80 |
 | WS2812B LED | Individually controllable RGB LEDs. | $0.09 | 5mm x 5mm x 2mm | 4 rec | $0.36 |
-| Microphone | Allow your swadge to hear! Warning: this disables battery monitoring. | $0.30 | |	$0.30 |
-| Speaker | Allow the swadge to make sound. | $0.40 | | $0.40 |
+| Microphone | Allow your swadge to hear! Warning: this disables battery monitoring. Will need extra $.15 in support circuitry like MCP6001T| $0.30 | | |	$0.45 |
+| Speaker | Allow the swadge to make sound. Will need support circuitry | $0.40 | | | $0.50 |
   
 ### Non-WIFI
 
