@@ -7,7 +7,7 @@ Definition
 
 # Artwork
 
-***THIS SECTION IS NOT YET MIGRATED FROM CONFLUENCE***
+***THIS SECTION IS NOT COMPLETE***
 If you're an artist, recommend you head over to Artwork Design first. If you're an event organizer, you may want to review this main page as well as the Schedule. For direct contact in private channel, use the #badges slack channel. For public questions and comments use the #circuitboards channel.
 
 ## Swadge Types
