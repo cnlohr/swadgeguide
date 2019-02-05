@@ -1,4 +1,8 @@
 # swadgeguide
+
+Definition
+> **/swædʒ/** *n.* a circuit board that may be worn by event attendees, closely associated with a badge, yet generally not providing credentials.
+
 My guide for making swadges.
 
 This is WiP.  DO NOT TREAT AS FINAL.
