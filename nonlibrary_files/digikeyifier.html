@@ -216,7 +216,9 @@ function RunCSVIzer()
 		
 	}
 	//var file64 = btoa( rettxt.value );	
+	
 	download( rettxt.value, "digikey.csv", "text/plain" );
+	
 	//document.getElementById( "outurl" ).innerHTML = '<a href={"data:application/octet-stream;charset=utf-16le;base64,' + file64 + ' } download=digikeybom.csv >digikeybom.csv</a>';
 	
 	console.log( outcsv );
@@ -236,7 +238,7 @@ function RunCSVIzer()
 <P><TEXTAREA id=output_csv></TEXTAREA>
 </TEXTAREA></P>
 
-<div id=outurl> </div>
-
+Download, and upload or visit here: <A HREF=https://www.digikey.com/BOM>https://www.digikey.com/BOM</A> and click "Or Create a BOM" and paste this in.
+	
 </BODY>
 </HTML>
