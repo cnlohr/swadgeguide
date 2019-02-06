@@ -32,6 +32,11 @@ NOTE: For PCB Manufacture, only the #PCB Export section is needed.
    * Use "," as a deliminator
    * Uncheck "Merge Deliminators"
  * Or open in Excel or Google Sheets to verify.
+ * If you want to buy all things marked with a "Digikey" tag...
+   * Visit https://cnlohr.github.io/swadgeguide/nonlibrary_files/digikeyifier.html copy-and-paste in the text of your list.
+   * Give digikey the cart file.
+
+
  * General warning: Do not use the BOM tool built into PCBNew.  Use the one built into eeschema.
 
 ## PCBs
