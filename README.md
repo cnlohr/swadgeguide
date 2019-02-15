@@ -5,10 +5,16 @@ This is WiP.  DO NOT TREAT AS FINAL.
 Definition
 > **/swædʒ/** *n.* a circuit board that may be worn by event attendees, closely associated with a badge, yet generally not providing credentials.
 
-# Artwork
+## Artwork
 
 ***THIS SECTION IS NOT COMPLETE***
 If you're an artist, recommend you head over to Artwork Design first. If you're an event organizer, you may want to review this main page as well as the Schedule. For direct contact in private channel, use the #badges slack channel. For public questions and comments use the #circuitboards channel.
+
+## PCB Design
+
+Please read this repo's design for kicad gide here: https://github.com/cnlohr/swadgeguide/blob/master/kicad_for_mfg/README.md
+
+There are amazing guides like Seeed's design for manufacture document: https://statics3.seeedstudio.com/fusion/ebook/PCB%20DFM%20V1.1.pdf however, we strongly recommend you keep design **AS SIMPLE AS POSSBILE** avoiding anything that requires anything more than the most basic of board and manufacturing systems.
 
 ## Swadge Types
 
