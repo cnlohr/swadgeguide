@@ -59,6 +59,14 @@ Cost column includes estimated assembly cost for 1000+ units.
 |PCB Assembly| |0.55| |
 |Shipping| |0.33| |
 
+#### 2020 Swadge Component Estimates (QTY 3000)
+|Part|Price|
+|----|-----|
+|[ESP-WROOM-02D](https://www.digikey.com/product-detail/en/espressif-systems/ESP-WROOM-02D/1904-1021-1-ND/9381730)|2.10|
+|[0.96" OLED](https://www.digikey.com/product-detail/en/vishay-dale/O128O064DLPP3N0000/541-3486-ND/7041857)|1.65|
+|[MMA8452Q Accelerometer](https://www.digikey.com/product-detail/en/nxp-usa-inc/MMA8452QR1/MMA8452QR1CT-ND/3524271)|1.05|
+|[QST QMA6981 Accelerometer](https://lcsc.com/product-detail/Others_QST-QMA6981_C310611.html)|0.2259|
+
 ### Non-WIFI
 
 Non-wifi swadges can use any number of mechanisms to operate. These do not need any form of infrastructure to operate and are generally lower-power, so they can be operated off of a lithium coin cell.
