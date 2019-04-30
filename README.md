@@ -34,7 +34,31 @@ Cost column includes estimated assembly cost for 1000+ units.
 | WS2812B LED | Individually controllable RGB LEDs. | $0.09 | 5mm x 5mm x 2mm | 4 rec | $0.36 |
 | Microphone | Allow your swadge to hear! Warning: this disables battery monitoring. Will need extra $.15 in support circuitry like MCP6001T| $0.30 | | |	$0.45 |
 | Speaker | Allow the swadge to make sound. Will need support circuitry | $0.40 | | | $0.50 |
-  
+
+#### 2019 Swadge Component Prices
+
+|Value|Footprint|Unit Price|Notes|
+|-----|---------|----------|-----|
+|Battery|BCAAPC|0.16|Use through-hole AA Battery Holder in Style of Keystone 2460|
+|Cap, 0.22u|C_0805|0.015| |
+|Cap, 22u 10V|C_0805|0.06| |
+|SK6812SIDE|SK6812SIDE|0.1|MUST use OFFICIAL SK6812-SIDE LEDs.|
+|ESP12S|ESP12E|2|ESP12F, N/A Use ESP12S or ESP12F Modules from Electrodragon|
+|USBMicroB-10118192-0001LF|USBMicroB-10118192-0001LF|0.15|Must use micro USB SMT-only Header|
+|Res, 1k|R_0805|0| |
+|Res, 10k|R_0805|0| |
+|Res, 47k|R_0805|0| |
+|Res, 220k|R_0805|0| |
+|Button|TACTILE10|0.04|PTS645SM43SMTR92 LFS, Use standard SMT box tactile buttons.  Similar to PTS645SM43SMTR92. Use RoHS if possible.|
+|Button|TACT_3x6_SINGLE|0.02|https://www.aliexpress.com/item/50pcs-lot-SMT-3x6x2-5MM-2PIN-Tactile-Tact-Push-Button-Micro-Switch-G73-Self-reset-Momentary/32804523270.html?spm=2114.search0104.3.65.6bbc193exM3dfC&ws_ab_test=searchweb0_0|
+|SWITCH_INV|JS_SWITCH|0.27|Use SPDT SLID Switch|
+|OPAMP_MCP6001T|SOT-23-5|0.2|MCP6001T-I/OT, Must use MCP6001T Opamp|
+|AP1117SOT223|SOT-223|0.1|AP1117E33G-13, Use any 1117 3.3V SOT-223 regulator.  I.e. AZ1117 or AP1117|
+|MO064402-6|Microphones Omnidirctnl Electret Condenser Microphone|0.486|MO064402-6, Use a standard through-hole electret microphone.|
+|PCB| |1.00| |
+|PCB Assembly| |0.55| |
+|Shipping| |0.33| |
+
 ### Non-WIFI
 
 Non-wifi swadges can use any number of mechanisms to operate. These do not need any form of infrastructure to operate and are generally lower-power, so they can be operated off of a lithium coin cell.
