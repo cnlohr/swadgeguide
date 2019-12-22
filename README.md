@@ -137,6 +137,10 @@ Consider actual swadge and selection:
 T-9 weeks out:
  * Design rough draft of board.
  * Place order for boards from PCBWay
+ * Request panel from MAGFest:
+     Title: Swadge XXX: Doing Just a Bit More Than Last Year
+     Description:  A group of Magfest volunteers made a Swadge, again! This time we've got new and exciting hardware and firmware that pushes it to the max. Join us for a development story or two, a Q&A, and ....
+
 
 T-8 weeks out:
  * Receive boards.
