@@ -13,7 +13,7 @@ Screenshots were captured using KiCad 6.0.0 on Windows 10.
     Make sure that:
 	    * Each symbol has an appropriate value (resistance, capacitance, etc.).
 	    * Each symbol has a Digikey or LCSC identifier. Generic passives (resistors & capacitors) do not need identifiers. Footprints witout parts (like a PCIe edge connetor) do not need identifiers either.
-		* Each symbol has the corret footprint.
+		* Each symbol has the correct footprint.
 		* Each symbol has appropriate notes (things like DNP [Do Not Populate] or if pins require a jumper).
 		* Each part is in stock somewhere. This matters more for unique parts, not passives like resistors and capacitors.
 
