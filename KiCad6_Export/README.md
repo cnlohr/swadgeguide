@@ -40,7 +40,7 @@ Screenshots were captured using KiCad 6.0.0 on Windows 10.
     1. Update PCB from Schematic. Don't "Delete footprints with no symbols" if there are art footprints not reflected on the schematic. Make sure there are no errors or warnings.  
         ![Import SCH Menu](import-sch-menu.png)
     1. Make sure all art, signatures, URLs, and versions are correct in silkscreen (and possibly metal) layers.
-	1. Run DRC. Make sure there are no errors and that any warnings are undstood. Things like silkscreen overlap are fine with me if they're fine with you.
+	1. Run DRC. Make sure there are no errors and that any warnings are undstood. Things like silkscreen overlap are fine with me if they're fine with you.  
         ![DRC Menu](drc-menu.png)
 	1. Visually inspect the 3D model, both front and back.
     1. Take a screenshot of the 3D model, both front and back, and save them in the `output` folder.
@@ -61,8 +61,10 @@ Screenshots were captured using KiCad 6.0.0 on Windows 10.
         
         The Gerber, drill, and placement files are in the Manufacture folder.
         
-        The BOM is in EXAMPLE_PROJECT-BOM.csv and contains manufacturing notes. Please read the notes and ask questions if you do not understand.
-        Digikey and LCSC part numbers are provided for reference. You do not have to purchase parts from those distributors. Please use the least expensive part, and ask us before making a replacement.
+        The BOM is in EXAMPLE_PROJECT-BOM.csv and contains manufacturing notes.
+        Please read the notes and ask questions if you do not understand.
+        Digikey and LCSC part numbers are provided for reference. You do not have to purchase parts from those distributors.
+        Please use the least expensive part, and ask us before making a replacement.
         
         3D renders are in EXAMPLE_PROJECT-Top.png and EXAMPLE_PROJECT-Bottom.png
         
