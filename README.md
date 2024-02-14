@@ -74,12 +74,7 @@ Non-wifi swadges can use any number of mechanisms to operate. These do not need 
 | Device | Description | Cost/ea | Size | Count | Extended |
 |--------|-------------|---------|------|-------|----------|
 | Circuit board	| | $0.30-$1.30	| 10x10mm to 100x100mm Up to 100x120mm (+$) | 1 | |
-| Processor |	ATTiny861 SOIC, Easy-to-work-with 8kB Flash, 512B R, 512B EE | $1.05 | 10x12mm x 3mm | All 16 GPIO |
-| | ATTiny861 QFN	Same as above | $0.67 - 0.88 | 5x5mm x 1mm | | |
-| | STM8S003 16MHz Might not work (Still needs testing); 8kB F, 1kB R, 128 B EE | $0.39 | 6.5x6.4mm x 2mm	| | |
-| | STM8L101 16MHz | Also cheap.  No ADC; 8kB F, 1.5kB R, 2kB EE | $0.51 | 6.5x6.4mm x 2mm	| | |
-| | STM8L051 16MHz	Cheap, ADC; 8kB F, 1kB R, 256 B EE	$0.50	6.5x6.4mm x 2mm	
-| | EFM8BB10F2G-A Unknown architecture.  Maybe very cheap. | | $0.33	3x3mm x 1mm	 | | |
+| Processor | CH32V003 | $.09 | 3x3mm x 1mm | 14 GPIO |
 | | Battery + Holder CR2032 210 mAh  | | | | |
 | Tactile Button | CKN9112TR-ND,	Attendees can interact by clicking buttons. | $0.10 | 6mm x 6mm x 4mm	 | | |
 | LEDs | Red	| | | |
@@ -115,6 +110,8 @@ For The KiCad design guide to help you make cheap-as-possible boards, check this
     1) PCB:
         * Specify 1.6mm board thickness.
         * Use specified colors.
+        * Make sure all battery connectors are ground flat.
+        * No sharp edges on PCBs
         * HASL Lead-free or Immersion Gold.
         * Board edges should be smooth.
     2) Other details
